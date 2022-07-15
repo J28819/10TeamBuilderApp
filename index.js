@@ -1,19 +1,119 @@
-const express = require('express')
-const app = express()
-app.use(express.static('public'))
-const port = 8080
+const express = require('express');
+const inquirer = require('inquirer');
+var fs = require('fs');
 
-const path = require('path')
-app.use('/css', express.static(path.join(__dirname, 'public/css')))
-app.use('/js', express.static(path.join(__dirname, 'public/js')))
-app.use('/json', express.static(path.join(__dirname, 'public/json')))
-app.use('/img', express.static(path.join(__dirname, 'public/img')))
+const app = express();
+const PORT = 3001;
+const path = require('path');
+const internal = require('stream');
+const Intern = require('./Intern');
+const Engineer = require('./Engineer');
+const Manager = require('./Manager');
+var cardsarray = []
+
+ 
+ const questions = [
+  {
+    type: 'list',
+    name: 'Etype',
+    message: '\033[0;32m\Chose one Employee type from the list or None to exit',
+    choices: ["Intern", "Engineer", "Manager", "Done" ],
+  }
+ ];
 
 
-app.get('/', (req, res) => {
-  res.sendFile(index.html)
-})
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+
+start()
+
+
+function addintern(){
+  let Ecard = `HTML Card Values`
+  console.log("This is the Intern")
+  const newIntern = new Intern()
+  let reactives = []
+  reactives.push(newIntern.getName(),newIntern.getEmail(),newIntern.getid(),newIntern.getSchool())
+  inquirer.prompt(reactives)
+  .then(
+    (answers) => {
+      console.log(answers)
+      start()
+    }
+  )
+}
+
+function addEngineer(){
+  console.log("This is the Engineer")
+  const newEngineer = new Engineer()
+  let reactives = []
+  reactives.push(newEngineer.getName(),newEngineer.getEmail(),newEngineer.getid(),newEngineer.getUserName())
+  inquirer.prompt(reactives)
+  .then(
+    (answers) => {
+    
+      
+      ActualRol = newEngineer.getRole()
+      //answers.push(ActualRol)
+      cardsarray.push(answers)
+      console.log(cardsarray)
+      start()
+    }
+  )
+}
+
+function addManager(){
+  console.log("This is the Manager")
+  const newManager = new Manager()
+  let reactives = []
+  reactives.push(newManager.getName(),newManager.getEmail(),newManager.getid(),newManager.getOfficeNumber())
+  inquirer.prompt(reactives)
+  .then(
+    (answers) => {
+      console.log(answers)
+      start()
+    }
+  )
+}
+
+
+
+
+
+function start(){
+ inquirer.prompt(questions).then(
+  (answers) => {
+    switch (answers.Etype) {
+      case "Intern": {
+       addintern()
+      }
+      break;
+      case "Engineer": {
+        addEngineer()
+        
+      }
+      break;
+      case "Manager": {
+        addManager()
+        
+      }
+      break;
+      case "Done": {
+        console.log("Building HTML file with all the cards.")
+
+    // writeFile function with filename, content and callback function
+    // fs.writeFile('README.md', readmetext, function (err) {
+    //     if (err) throw err;
+    //     console.log('File is created successfully.');
+    //   });
+      }
+      break;
+    }
+    
+    }
+ 
+
+ 
+ );
+
+ 
+  }
