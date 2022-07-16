@@ -2,32 +2,30 @@
 const Employee = require('./Employe');
 
 class Manager extends Employee {
-  constructor(name,id,email,userName) {
+  constructor(name,id,email,Office) {
 
     super(name, id, email);
-    this.school = school;
+    this.Office = Office;
   }
 
 getOfficeNumber(){
     return  {
         type: 'input',
         name: 'userName',
-        message: 'Whats your GitHub Username?',
+        message: 'Whats your Office Number?',
         validate(value) {
           const pass = value;
           if (value.length >= 5) {
             return true;
           }
-          return `Please add your GitHub name, this Field cannot be Empty:`;
+          return `Please type your Office Number, this Field cannot be Empty:`;
         },
   
       }
 }
 
 getRole() {
-    return {
-        role: "Manager"
-    }
+    return "Manager"
 }
 
 

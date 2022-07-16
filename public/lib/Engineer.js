@@ -20,12 +20,11 @@ getUserName(){
           }
           return `Please add your GitHub name, this Field cannot be Empty:`;
         },
-  
       }
 }
 
 getRole() {
-    return {Role: "Engineer"}
+    return "Engineer"
 }
 
 
