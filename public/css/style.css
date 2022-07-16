@@ -26,11 +26,13 @@ section {
   /* Set black background color, white text and some padding */
 .card {
   position: relative;
-  background-image: "./assets/img/cloudy.png";
+  background-image: "./assets/img/Engineer.png";
   margin: 1rem;
   background-color: #eeeeee;
   border: 3px solid #075fa7;
   border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-Left-radius: 15px;
   border-top-right-radius: 15px;
   height: 300px;
   width: 290px;
