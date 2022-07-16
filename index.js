@@ -9,7 +9,10 @@ const internal = require('stream');
 const Intern = require('./Intern');
 const Engineer = require('./Engineer');
 const Manager = require('./Manager');
-var cardsarray = []
+var cardsarrayEE = []
+var cardsarrayEI = []
+var cardsarrayEM = []
+var Employeecastcards = ""
 
  
  const questions = [
@@ -17,7 +20,7 @@ var cardsarray = []
     type: 'list',
     name: 'Etype',
     message: '\033[0;32m\Chose one Employee type from the list or None to exit',
-    choices: ["Intern", "Engineer", "Manager", "Done" ],
+    choices: ["Intern", "Engineer", "Manager", "Finish" ],
   }
  ];
 
@@ -50,12 +53,10 @@ function addEngineer(){
   inquirer.prompt(reactives)
   .then(
     (answers) => {
-    
-      
       ActualRol = newEngineer.getRole()
       //answers.push(ActualRol)
-      cardsarray.push(answers)
-      console.log(cardsarray)
+      cardsarrayE.push(answers)
+      console.log(cardsarrayE)
       start()
     }
   )
@@ -75,10 +76,6 @@ function addManager(){
   )
 }
 
-
-
-
-
 function start(){
  inquirer.prompt(questions).then(
   (answers) => {
@@ -97,7 +94,7 @@ function start(){
         
       }
       break;
-      case "Done": {
+      case "Finish": {
         console.log("Building HTML file with all the cards.")
 
     // writeFile function with filename, content and callback function

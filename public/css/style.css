@@ -1,15 +1,11 @@
 
 /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-.row.content {height: 1500px}
+.row.content {height: 100px}
 
-/* Set gray background color and 100% height */
-.sidenav {
-  background-color: #f1f1f1;
-  height: 100%;
-}
 
 /* Set black background color, white text and some padding */
 section {
+  
     background-color: #555;
     color: white;
     padding: 15px;
@@ -28,14 +24,14 @@ section {
   position: relative;
   background-image: "./assets/img/Engineer.png";
   margin: 1rem;
-  background-color: #eeeeee;
-  border: 3px solid #075fa7;
+  font-size: 14px;
+  border: 3px solid #4d595f;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   border-top-Left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 300px;
-  width: 290px;
+  height: 350px;
+  width: 320px;
   
 }
 
@@ -47,19 +43,7 @@ section {
   border-top-right-radius: 15px;
 }
 
-
-
-
-
-
-#day1{
-  display: none;
-}
-
-
 img {
-  
-  
   border: 1px solid #ffffff;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -74,7 +58,7 @@ footer {
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1267px) {
   .sidenav {
     height: auto;
     padding: 15px;
