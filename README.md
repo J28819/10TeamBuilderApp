@@ -58,10 +58,10 @@ THEN I exit the application, and the HTML is generated
 
 ## Screenshoots
 Overview
-![My animated logo](.public/assets/overview.png)
+![My animated logo](./public/assets/overview.png)
 
 Overview2
-![My animated logo](.public/assets/overview2.png)
+![My animated logo](./public/assets/overview2.png)
 
 
 
