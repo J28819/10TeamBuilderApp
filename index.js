@@ -59,7 +59,7 @@ function addManager(){
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Name: ${answers.name}</li>
             <li class="list-group-item"> <a href = "mailto:${answers.email}?subject = Feedback&body = Message">email: <span>${answers.email}</span> </a></li>
-            <li class="list-group-item"><a href = "#">GitHub: ${answers.UserName} </a></li>
+            <li class="list-group-item">Office#: ${answers.UserName}</li>
           </ul>
         </div>
         <hr>
@@ -128,7 +128,7 @@ function addintern(){
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Name: ${answers.name}</li>
             <li class="list-group-item"> <a href = "mailto:${answers.email}?subject = Feedback&body = Message">email: <span>${answers.email}</span> </a></li>
-            <li class="list-group-item"><a href = "#">School: ${answers.school} </a></li>
+            <li class="list-group-item">School: ${answers.school}</li>
           </ul>
         </div>
         <hr>

@@ -58,14 +58,11 @@ THEN I exit the application, and the HTML is generated
 
 ## Screenshoots
 Overview
-![My animated logo](./assets/readmepics/overview.png)
+![My animated logo](.public/assets/overview.png)
 
-Autocomplete city
-![My animated logo](./assets/readmepics/overview2.png)
+Overview2
+![My animated logo](.public/assets/overview2.png)
 
-LocalStorage
-Autocomplete city
-![My animated logo](./assets/readmepics/overview3.png)
 
 
 ## Conclusion 
